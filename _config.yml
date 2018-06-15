@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: 猪加谊
-brief-intro: 猪加谊猪加谊猪加谊
+title: 张加谊
+brief-intro: 张加谊张加谊张加谊
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://gaohaoyang.github.io" # the base hostname & protocol for your site
+url: "https://lissa-321.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
