@@ -9,9 +9,8 @@ author: Lissa
 * content
 {:toc}
 
-<div><img src="https://raw.githubusercontent.com/Lissa-321/Lissa-321.github.io/master/1.jpg"></div>
+<div><img src="https://raw.githubusercontent.com/Lissa-321/Lissa-321.github.io/master/10.jpg"></div>
 
-![](https://img.alicdn.com/tfs/TB16.GnOpXXXXXdapXXXXXXXXXX-307-134.png)
 ## 食材明细
 ### 主料
 适量牛里脊 
