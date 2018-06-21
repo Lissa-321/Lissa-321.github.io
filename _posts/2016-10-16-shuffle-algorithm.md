@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "【情人节的烛光晚餐】黑胡椒牛排 意大利面"
-categories: 西餐
-tags:做法
+categories: 正餐
+tags:牛排 面食 做法
 author: Lissa
 ---
 
