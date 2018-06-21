@@ -15,7 +15,7 @@ type: page
         <hr>
         <ul>
           {% for post in site.posts %}
-
+                <h1>{{post}}</h1>
             {% unless post.next %}
               <h2 id="y{{ post.date | date: '%Y' }}">{{ post.date | date: '%Y' }}</h2>
             {% else %}
