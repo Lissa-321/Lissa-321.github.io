@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "专属于孩子的卖萌西餐：小刺猬奶油土豆泥"
-categories:甜品
+categories: 甜品
 tags: 做法
 ---
 
