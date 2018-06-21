@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "照烧牛排"
-categories: 西餐
-tags:  做法
+categories: 正餐
+tags: 牛排 做法
 author: Lissa
 ---
 
