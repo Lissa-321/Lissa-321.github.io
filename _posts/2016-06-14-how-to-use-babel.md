@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "西多士"
-categories: 西餐
-tags:做法
+categories: 早餐
+tags: 面包 做法
 ---
 
 * content
