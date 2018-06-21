@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "炸薯条"
-categories: 西餐
-tags:  做法
+categories: 小吃
+tags:  薯条 做法
 ---
 
 * content
