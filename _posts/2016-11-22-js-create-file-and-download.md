@@ -9,8 +9,9 @@ author: Lissa
 * content
 {:toc}
 
-<div><img src="https://raw.githubusercontent.com/Lissa-321/Lissa-321.github.io/master/10.jpg"></div>
+<div><img src="https://raw.githubusercontent.com/Lissa-321/Lissa-321.github.io/master/1.jpg"></div>
 
+![](https://img.alicdn.com/tfs/TB16.GnOpXXXXXdapXXXXXXXXXX-307-134.png)
 ## 食材明细
 ### 主料
 适量牛里脊 
@@ -33,11 +34,6 @@ author: Lissa
 三刻钟
 ### 难度
 普通
-
-
-
-
-![](https://img.alicdn.com/tfs/TB16.GnOpXXXXXdapXXXXXXXXXX-307-134.png)
 
 ## 照烧牛排的做法步骤
 照烧牛排的做法步骤：1  1主料：牛里脊、
