@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "西餐美食做法"
-categories: JavaScript
+categories: 西餐
 tags: 美食 做法
 author: Lissa
 ---
