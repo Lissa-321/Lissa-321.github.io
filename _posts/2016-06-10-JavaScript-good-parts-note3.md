@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "美味香菇培根披萨"
-categories: 西餐
-tags: 做法
+categories: 正餐
+tags: pizza 做法
 ---
 
 * content
