@@ -1,107 +1,63 @@
 ---
 layout: post
-title:  "Fisher–Yates shuffle 洗牌算法"
-categories: JavaScript
-tags:  算法 shuffle 乱序 洗牌
-author: HyG
+title:  "【情人节的烛光晚餐】黑胡椒牛排 意大利面"
+categories: 西餐
+tags:做法
+author: Lissa
 ---
 
 * content
 {:toc}
 
-简单来说 Fisher–Yates shuffle 算法是一个用来将一个有限集合生成一个随机排列的算法（数组随机排序）。这个算法生成的随机排列是等概率的。同时这个算法非常高效。
+“情人节不是一定要花大钱去西餐厅，其实在家也会有幸福的浪漫感觉，给他一个家的感觉比什么都重要，再贵的花，最昂贵的礼物比不上最简单的幸福。”
 
-本文主要介绍这个算法的来源、演变、原理。并举出一个例子为大家清晰的描述每次迭代过程。最后使用 JavaScript 代码将算法实现。
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Riffle_shuffle.jpg/320px-Riffle_shuffle.jpg)
+<div><img src="https://raw.githubusercontent.com/Lissa-321/Lissa-321.github.io/master/11.jpg"></div>
 
 
 
 
-## Fisher and Yates 的原始版
+## 食材明细
+### 主料
+一大块牛排
+一小个西兰花
+一小个胡萝卜
+8个小番茄
+少许黄瓜
+适中意大利面
+适中意大利面酱
+### 辅料
+一小碗花椒水
+一小个洋葱
+50g黄油
+### 配料
+少许咸盐
+一勺鸡精
+一勺料酒
+### 口味
+咸鲜
+### 工艺
+煎
+### 耗时
+一小时
+### 难度
+普通
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Biologist_and_statistician_Ronald_Fisher.jpg/189px-Biologist_and_statistician_Ronald_Fisher.jpg)
+## 黑胡椒牛排的做法步骤
 
-Fisher–Yates shuffle 的原始版本，最初描述在 1938 年的 Ronald Fisher（上图） 和 Frank Yates 写的书中，书名为《Statistical tables for biological, agricultural and medical research》。他们使用纸和笔去描述了这个算法，并使用了一个随机数表来提供随机数。它给出了 1 到 N 的数字的的随机排列，具体步骤如下：
-
-1. 写下从 1 到 N 的数字
-2. 取一个从 1 到剩下的数字（包括这个数字）的随机数 k
-3. 从低位开始，得到第 k 个数字（这个数字还没有被取出），把它写在独立的一个列表的最后一位
-4. 重复第 2 步，直到所有的数字都被取出
-5. 第 3 步写出的这个序列，现在就是原始数字的随机排列
-
-已经证明如果第 2 步取出的数字是真随机的，那么最后得到的排序一定也是。
-
-## 现代方法
-
-Fisher–Yates shuffle 算法的现代版本是为计算机设计的。由 Richard Durstenfeld 在1964年 描述。并且是被 Donald E. Knuth 在 《The Art of Computer Programming》 中推广。但是不管是 Durstenfeld 还是 Knuth，都没有在书的第一版中承认这个算法是 Fisher 和 Yates 的研究成果。也许他们并不知道。不过后来出版的 《The Art of Computer Programming》提到了 Fisher 和 Yates 贡献。
-
-现代版本的描述与原始略有不同，因为如果按照原始方法，愚蠢的计算机会花很多无用的时间去计算上述第 3 步的剩余数字。**这里的方法是在每次迭代时交换这个被取出的数字到原始列表的最后**。这样就将时间复杂度从 O(n^2) 减小到了 **O(n)**。算法的伪代码如下：
-
-```
--- To shuffle an array a of n elements (indices 0..n-1):
-for i from n−1 downto 1 do
-     j ← random integer such that 0 ≤ j ≤ i
-     exchange a[j] and a[i]
-```
-
-## 例子
-
-### 迭代步骤演示
-
-根据每次迭代次数可以用下面的表格，描述这个算法的执行过程
-
-| 随机数取值范围 | 随机数 |        原始数据 | 结果          |
-|:---------------|:-------|----------------:|:--------------|
-|                |        | 1 2 3 4 5 6 7 8 |               |
-| 1-8            | 6      |   1 2 3 4 5 7 8 | 6             |
-| 1-7            | 2      |     1 7 3 4 5 8 | 2 6           |
-| 1–6            | 6      |       1 7 3 4 5 | 8 2 6         |
-| 1–5            | 1      |         5 7 3 4 | 1 8 2 6       |
-| 1–4            | 3      |           5 7 4 | 3 1 8 2 6     |
-| 1–3            | 3      |             5 7 | 4 3 1 8 2 6   |
-| 1–2            | 1      |               7 | 5 4 3 1 8 2 6 |
-
-### 动画演示
-
-下面这个动画就是整个数组 0-19 的随机排序过程
-
-<iframe height='317' scrolling='no' src='//codepen.io/haoyang/embed/jrvrQq/?height=317&theme-id=dark&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/haoyang/pen/jrvrQq/'>Fisher–Yates shuffle</a> by Chuan shi (<a href='http://codepen.io/haoyang'>@haoyang</a>) on <a href='http://codepen.io'>CodePen</a>.
-</iframe>
-
-## JavaScript 代码实现
-
-```js
-/**
- * Fisher–Yates shuffle
- */
-Array.prototype.shuffle = function() {
-    var input = this;
-
-    for (var i = input.length-1; i >=0; i--) {
-
-        var randomIndex = Math.floor(Math.random()*(i+1));
-        var itemAtIndex = input[randomIndex];
-
-        input[randomIndex] = input[i];
-        input[i] = itemAtIndex;
-    }
-    return input;
-}
-```
-
-使用方式也很简单，直接用数组调用这个方法即可
-
-```js
-[1,2,3,4,5,6,7,8].shuffle()
-
-//[4, 6, 3, 2, 5, 1, 7, 8] // 每次结果都是随机的
-```
-
-## 总结
-
-总之，Fisher–Yates shuffle 算法是一个非常高效又公平的随机排序算法，如果有随机排序数组的需求，用这个就对了！
-
-## 参考
-
-- [Fisher–Yates shuffle From Wikipedia](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：1  1把所有的材料都准备好：牛肉，胡椒粉，洋葱，胡萝卜，小番茄，黄瓜，胡椒粉，西兰花。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：2  2把牛肉洗干净，吸完水分，用刀柄拍打牛肉5分钟，不要太用力，来回拍打。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：3  3拍打好的牛肉，用咸盐和胡椒粉料酒腌制20分钟。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：4  4西兰花洗好切好，胡萝卜切片。备用。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：5  5锅中加盐，把西兰花和胡萝卜噪一下，拿出备用。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：6  6平底锅内加入黄油，这样煎出的牛排比较香甜。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：7  7大火煎制，一面50秒，切忌，边煎制，根据自己的喜欢成熟程度来煎制。用大火是为了锁住牛排中的水分，这样的做法也是和别人借鉴的，真的煎制的牛排很嫩。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：8  8准备黑胡椒的材料，牛肉末，洋葱末，蒜末。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：9  9牛肉炒香。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：10  10加入洋葱，黑胡椒，蒜末，鸡精，料酒，花椒水，开始开小火熬，熬到粘稠就关火。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：11  11煮意大利面，不要太软。这样口感不好。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：12  12装盘，把黑胡椒浇在牛排上，盘子的装饰自己来摆，发挥你的想象。意大利面上撒上意大利面酱，，切点黄瓜片，小番茄装饰一下，住一个小玉米，陪着吃，来点红酒更是美味。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：13  13看看，两个盘子不一样，来一份男女合拍的装饰，是不是很浪漫。
+【情人节的烛光晚餐】黑胡椒牛排 意大利面的做法步骤：14  
+## 小窍门
+切忌开大火煎制牛排，为了锁住水分。
+使用的厨具：平底锅
