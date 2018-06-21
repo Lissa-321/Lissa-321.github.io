@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "海鲜意面"
-categories: 西餐
-tags:  做法
+categories: 正餐
+tags:  面食 做法
 author: Lissa
 ---
 
