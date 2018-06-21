@@ -11,7 +11,7 @@ author: Lissa
 
 “意面是西餐中比较容易制作，也是中国人在口感上最容易接受的品种。意面的口味有很多，更有些朋友喜欢在家中创造一些混搭风的意面，今天我发的是比较常见的红酱海鲜意面。海鲜只用了家里现有的虾和鱿鱼，本想再去买些蛤蜊，可是实在不喜欢用叉子吃蛤蜊的感觉，干脆也就不难为自己了。红酱是我自己做的，谈不上正宗，却是我很喜欢的味道。”
 
-https://raw.githubusercontent.com/Lissa-321/Lissa-321.github.io/master/1.jpg
+<div><img src="https://raw.githubusercontent.com/Lissa-321/Lissa-321.github.io/master/9.jpg"></div>
 
 
 
