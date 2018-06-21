@@ -2,8 +2,8 @@
 layout: post
 title:  "酥炸黄金虾"
 date:   2016-05-06 11:40:18 +0800
-categories: 西餐
-tags: 做法
+categories: 小吃
+tags: 虾 做法
 ---
 * content
 {:toc}
